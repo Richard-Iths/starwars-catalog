@@ -3,11 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/jam-icons/css/jam.min.css" />
     <link rel="stylesheet" href="public/css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ropa+Sans&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ropa+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="title">STAR WARS CATALOG</h1>
+      </header>
+      <main>
+        <section class="main">
+          <div class="card">
+            <div class="card__heading bg-color--selected shadow-bottom2">
+              <h2 class="heading">Characters</h2>
+            </div>
+            <div class="card__content">
+              <div class="loader hidden characters-loader"></div>
+              <ul class="star-wars-characters special-text"></ul>
+            </div>
+            <div class="card__footer">
+              <ul class="list-iterator">
+                <li class="list-iterator__prev">
+                  <i class="jam jam-chevron-left"></i>
+                </li>
+                <li class="list-iterator__current">1</li>
+                <li>/</li>
+                <li class="list-iterator__of">8</li>
+                <li class="list-iterator__next">
+                  <i class="jam jam-chevron-right"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card shadow-bottom">
+            <div class="card__heading bg-color--green">
+              <h2 class="heading">Details</h2>
+            </div>
+            <div class="card__content">
+              <div class="loader hidden character-info-loader"></div>
+              <ul class="star-wars-character-details special-text"></ul>
+            </div>
+            <div class="card__content bg-color--dark-grey color-white">
+              <div class="loader hidden planet-info-loader"></div>
+              <ul class="star-wars-character-planet special-text"></ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <script src="public/js/app.js"></script>
   </body>
 </html>

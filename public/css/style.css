@@ -2,10 +2,244 @@
 font-family: 'Roboto', sans-serif;
 font-family: 'Ropa Sans', sans-serif;
 */
-element {
+:root {
   --yellow: #FFD600;
   --almost-black: #424242;
   --light-grey: #E1DEDE;
   --grey: #C4C4C4;
   --dark-grey: #8E8E8E;
+  --selected-color: #444444;
+  --greenish-gray: #748687;
+}
+
+* {
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6em;
+  line-height: 1.6em;
+  font-family: 'Roboto',sans-serif;
+  background-color: var(--almost-black);
+}
+.wrapper {
+  max-width: 1440px;
+  margin:0 auto;
+}
+
+header {
+  background: url('../assets/sw-header.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Main section */
+.main {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+.card {
+  height: 100%;
+  width: 35%;
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  border-radius: 4px;
+}
+/* .card div {
+  padding: 2rem;
+} */
+
+.card__heading {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 2rem;
+}
+.card__content {
+  flex-grow: 1;
+}
+.card__footer {
+  display: flex;
+  justify-content: center;
+}
+.star-wars-characters {
+  list-style-type: none;
+}
+.star-wars-characters li {
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  padding: 1rem;
+  cursor: pointer;
+}
+.star-wars-characters li:nth-child(even) {
+  background-color: var(--light-grey);
+}
+.star-wars-characters li:nth-child(odd) {
+  background-color: var(--dark-grey);
+  color: #fff;
+}
+.star-wars-characters li:focus,
+.star-wars-characters li:hover {
+  background-color: var(--selected-color);
+}
+.list-iterator{
+  list-style-type: none;
+  display: flex;
+  font-size: 1.5em;
+}
+.list-iterator li {
+  padding: 1rem;
+}
+
+.list-iterator__prev, .list-iterator__next {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Details Card */
+.star-wars-character-planet,
+.star-wars-character-details {
+  list-style-type: none;
+}
+.star-wars-character-planet li,
+.star-wars-character-details li {
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+}
+
+
+/* Utility classes */
+/* Fonts */
+.title {
+  color: var(--yellow);
+  font-family: 'Ropa Sans', sans-serif;
+  padding: 5rem;
+  margin: 0;
+  font-size: 3.5rem;
+  width: 10em;
+  letter-spacing: 0.15em;
+  line-height: 1.2em;
+  font-size: 4em;
+}
+.heading {
+  color: var(--yellow);
+  font-family: "Ropa Sans",sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.special-text {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+.list-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+/* Background colors */
+.bg-color--green{
+  background-color: var(--greenish-gray);
+}
+
+.bg-color--selected {
+  background-color: var(--selected-color);
+}
+.bg-color--dark-grey {
+  background-color: var(--dark-grey);
+}
+.color-white {
+  color:#fff;
+}
+
+/* shadows */
+.shadow-bottom {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.shadow-bottom2 {
+  box-shadow: 5px 10px 15px 0px rgb(255, 254, 254);
+}
+
+/* Loader */
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: var(--grey);
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.loader.hidden {
+  display: none;
 }

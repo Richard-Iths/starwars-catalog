@@ -2,3 +2,10 @@
 font-family: 'Roboto', sans-serif;
 font-family: 'Ropa Sans', sans-serif;
 */
+element {
+  --yellow: #FFD600;
+  --almost-black: #424242;
+  --light-grey: #E1DEDE;
+  --grey: #C4C4C4;
+  --dark-grey: #8E8E8E;
+}

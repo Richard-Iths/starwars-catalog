@@ -19,7 +19,7 @@
       <main>
         <section class="main">
           <div class="card">
-            <div class="card__heading bg-color--selected shadow-bottom">
+            <div class="card__heading bg-color--selected">
               <h2 class="heading">Characters</h2>
             </div>
             <div class="card__content">
@@ -48,8 +48,29 @@
               <div class="loader hidden character-info-loader"></div>
               <ul class="star-wars-character-details special-text"></ul>
             </div>
+            <div class="card__tab">
+              <nav class="star-wars-info-tab">
+                <button data-api-key="homeworld" class="btn-star-wars-planet">
+                  Planet
+                </button>
+                <button
+                  data-api-key="starships"
+                  class=".btn-star-wars-starships"
+                >
+                  Starships
+                </button>
+                <button data-api-key="species" class="btn-star-wars-Species">
+                  Species
+                </button>
+                <button data-api-key="vehicles" class="btn-star-wars-Vehicles">
+                  Vehicles
+                </button>
+              </nav>
+            </div>
             <div class="card__content bg-color--dark-grey color-white">
-              <div class="loader hidden planet-info-loader"></div>
+              <div
+                class="loader hidden character-info-loader character-info-details-loader"
+              ></div>
               <ul class="star-wars-character-planet special-text"></ul>
             </div>
           </div>

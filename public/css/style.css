@@ -27,7 +27,7 @@ body {
   background-color: var(--almost-black);
 }
 .wrapper {
-  max-width: 1440px;
+  /* max-width: 1440px; */
   margin:0 auto;
 }
 
@@ -35,6 +35,7 @@ header {
   background: url('../assets/sw-header.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: -12rem;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -57,18 +58,27 @@ header {
   display: flex;
   flex-direction: column;
   background-color: var(--grey);
-  border-radius: 4px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 /* .card div {
   padding: 2rem;
 } */
 
 .card__heading {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   text-align: center;
   letter-spacing: 3px;
-  padding: 2rem;
+  padding: 3rem;
+  z-index: 1;
+}
+
+
+.card__tab button:hover,
+.card__tab button:focus {
+  background-color: var(--dark-grey);
+  color: var(--yellow);
 }
 .card__content {
   flex-grow: 1;
@@ -111,15 +121,41 @@ header {
   user-select: none;
 }
 
+/* Tab menu */
+.star-wars-info-tab {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.star-wars-info-tab button {
+  border: none;
+  padding: 1.5rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-left: 1rem;
+  margin-right: .5rem;
+  min-width: 12rem;
+  background-color: var(--light-grey);
+  color: #8b760d;
+  letter-spacing: 3px;
+}
 /* Details Card */
 .star-wars-character-planet,
 .star-wars-character-details {
   list-style-type: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .star-wars-character-planet li,
 .star-wars-character-details li {
-  padding-top: 1.5rem;
+  padding-top: .5rem;
   padding-left: 2rem;
+  letter-spacing: .4rem;
+}
+.star-wars-character-planet li:first-child,
+.star-wars-character-details li:first-child {
+  margin-bottom: .5rem;
+  letter-spacing: 1rem;
 }
 
 
@@ -150,7 +186,7 @@ header {
 .list-title {
   font-size: 1.5em;
   font-weight: bold;
-  letter-spacing: 10px;
+  /* letter-spacing: 20rem; */
 }
 /* Background colors */
 .bg-color--green{
@@ -172,6 +208,9 @@ header {
   box-shadow: 0 5px 10px rgba(0,0,0,.3);
 }
 
+.mt-2 {
+  margin-top:2rem;
+}
 
 /* Loader */
 .loader {
